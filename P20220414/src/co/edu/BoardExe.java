@@ -11,11 +11,11 @@ public class BoardExe {
 		
 		while (true) {
 			
-			System.out.println("1.추가 2.수정  3.목록  4.삭제  5.한건조회 9.종료");
+			System.out.println("1.추가 2.수정  3.목록  4.삭제  5.한건조회 6.작성자조회 9.종료");
 			System.out.print("선택>> ");
 			int menu = scn.nextInt();
-			
 			scn.nextLine();
+			
 			if(menu == 1) {
 				System.out.print("글번호입력>> ");
 				int bNo = scn.nextInt();
