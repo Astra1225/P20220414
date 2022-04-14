@@ -11,8 +11,14 @@ public class Student {
 	
 	// 생성자. => 인스턴스를 만들어줄때 처리할 기능정의
 	// 매개값이 생성자를 기본생성자.
-
 	
+	
+public Student() {
+	System.out.println("생성자가 호출되었습니다.");
+}
+
+
+
 	// 생성자는 필드의 값을 지정할 때.
 	public Student(String nm, String sn) {
 		name = nm;
