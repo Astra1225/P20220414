@@ -60,8 +60,19 @@ public class Board {
 	public void getInfo() {
 		// 게시글번호 제목 내용 작성자 조회수
 		System.out.printf("%3d %-10s %-15s %-5s %2d\n", //
-				this.boardNo, this.title, this.content, this.writer, this.searchCnt
-				);
+				this.boardNo, this.title, this.content, this.writer, this.searchCnt);
 	}
-
+		public void getDetailInfo() {
+			// 게시글번호            작성자
+			// 제목                조회수
+			// 내용
+			String info = "========================================" +//
+			              "게시글번호 : %2d            작성자 :  %-5s" +//
+					      "제목 :  %-15s           조회수 : %3d" +//
+			              "내용 :  %-30s"+//
+					      "========================================";//
+			System.out.printf("", //
+					this.boardNo,  this.writer, this.title, this.searchCnt);
+		}
 }
+	
