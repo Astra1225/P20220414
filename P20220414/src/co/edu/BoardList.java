@@ -70,4 +70,16 @@ public class BoardList {
 	public Board[] boardList() {
 		return boards;
 	}
+	
+	// 작성자 조회기능.
+	public Board[] getWriterList(String bwriter) {
+		for(int i=0; i<boards.length; i++) {
+			if(boards[i].getWriter().equals(bwriter) ) {
+				String writer = boards[i].getWriter();
+				return null;
+			}
+		}
+		
+		return null;
+	}
 }

@@ -85,6 +85,18 @@ public class BoardExe {
 					getBoard.getDetailInfo();
 				}
 				
+			}else if (menu == 6) {
+				System.out.println("조회할 작성자이름>>>");
+			    String bwriter = scn.nextLine();
+				Board[] getBoard = boardList.getWriterList(bwriter);
+				
+				if(getBoard == null) {
+					System.out.println("조회결과 없습니다.");
+					
+				}else {
+
+				}
+			
 			}else if (menu == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
