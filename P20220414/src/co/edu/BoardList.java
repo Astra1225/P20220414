@@ -72,14 +72,22 @@ public class BoardList {
 	}
 	
 	// 작성자 조회기능.
-	public Board[] getWriterList(String bwriter) {
-		for(int i=0; i<boards.length; i++) {
-			if(boards[i].getWriter().equals(bwriter) ) {
-				String writer = boards[i].getWriter();
-				return null;
-			}
-		}
-		
-		return null;
+	public Board[] getWriterList(String writer) {
+	     Board[] sBoards = new Board[5];
+	       
+	       for(int i = 0; i<boards.length; i++)    //찾을 대상 배열
+	    	   if(boards[i] != null && boards[i].getWriter().equals(writer)) {
+	    	      for(int j=0; j<sBoards.length; j++)	{  //이를 조회 반환 배열
+	    	    	  if(sBoards[j] == null) {
+	    	    		  sBoards[j] = boards[i];
+	    	    		  break ;
+	    	    	  }
+	    	      }
+	    	 
+	    	   }
+	   	return sBoards;	       
 	}
 }
+
+	
+

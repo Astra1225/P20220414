@@ -9,6 +9,8 @@ public class Board {
 	private String writer;
 	private int searchCnt = 0;
 	
+	
+		
 	//생성자.
 	public Board(int boardNo, String title, String content, String writer) {
 		this.boardNo = boardNo;
@@ -74,5 +76,13 @@ public class Board {
 			System.out.printf("", //
 					this.boardNo,  this.writer, this.title, this.searchCnt);
 		}
+
+		@Override // 부모클래스 toString -> 자식클래스 재정의
+		public String toString() {
+			return "Board [boardNo=" + boardNo + ", title=" + title + ", content=" + content + ", writer=" + writer
+					+ ", searchCnt=" + searchCnt + "]";
+		}
+		
+		
 }
 	
